@@ -40,3 +40,11 @@ public class Data
         }
     }
 ```
+
+
+
+```C#
+    string q = comboBox1.Text;
+    Regex r = new Regex(q);
+    Match m = r.Match(data.txt);
+```
