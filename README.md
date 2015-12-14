@@ -47,4 +47,15 @@ public class Data
     string q = comboBox1.Text;
     Regex r = new Regex(q);
     Match m = r.Match(data.txt);
+    if (m.Success)
+            {
+                richTextBox2.Text += "Найдено: " + m.Value;
+
+                richTextBox1.SelectionBackColor = Color.White;
+                richTextBox1.SelectionStart = m.Index;
+                richTextBox1.SelectionLength = m.Value.Length;
+                richTextBox1.SelectionBackColor = Color.Yellow;
+                richTextBox1.ScrollToCaret();
+            }
 ```
+
